@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анализ цен товаров</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header>
+    <h1>📊 Анализ цен товаров</h1>
+    <p>Интерактивный дашборд для базы данных student_task</p>
+  </header>
+
+  <div class="layout">
+
+    <!-- ===== САЙДБАР С КНОПКАМИ ===== -->
+    <aside class="controls">
+
+      <h2>Статистика цен</h2>
+      <button class="action-btn" data-action="stat" data-metric="mean">
+        Средняя цена
+      </button>
+      <button class="action-btn" data-action="stat" data-metric="median">
+        Медианная цена
+      </button>
+      <button class="action-btn" data-action="stat" data-metric="min">
+        Минимальная цена
+      </button>
+      <button class="action-btn" data-action="stat" data-metric="max">
+        Максимальная цена
+      </button>
+      <button class="action-btn" data-action="stat" data-metric="std">
+        Стандартное отклонение
+      </button>
+      <button class="action-btn" data-action="stat" data-metric="total">
+        Количество записей
+      </button>
+
+      <h2>Графики</h2>
+      <button class="action-btn" data-action="chart" data-kind="histogram">
+        Распределение цен
+      </button>
+      <button class="action-btn" data-action="chart" data-kind="categories">
+        Цены по категориям
+      </button>
+      <button class="action-btn" data-action="chart" data-kind="suppliers">
+        ТОП-10 поставщиков
+      </button>
+      <button class="action-btn" data-action="chart" data-kind="price_types">
+        Ценовые диапазоны
+      </button>
+
+      <button class="action-btn clear" id="clear-btn">
+        🗑 Очистить
+      </button>
+
+    </aside>
+
+    <!-- ===== ОСНОВНАЯ ОБЛАСТЬ ДЛЯ РЕЗУЛЬТАТОВ ===== -->
+    <main id="result-area">
+      <p class="placeholder">
+        ← Нажмите кнопку слева, чтобы увидеть результат
+      </p>
+    </main>
+
+  </div>
+
+  <!-- ===== ПОДВАЛ ===== -->
+  <footer>
+    <p>© 2026 Сиротченко Елизавета · Курс «Информатика»</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

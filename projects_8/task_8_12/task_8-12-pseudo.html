@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Псевдоклассы и селекторы по атрибутам</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #fafaf7;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #2e7d32;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #1b5e20;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 5px;
+        }
+
+        /* ===== УПОРЯДОЧЕННЫЙ СПИСОК ===== */
+        ol {
+            padding-left: 25px;
+            margin-bottom: 30px;
+        }
+
+        ol li {
+            padding: 10px 15px;
+            margin-bottom: 2px;
+            background: #ffffff;
+            border-radius: 4px;
+        }
+
+        /* :first-child — выделить первый пункт */
+        ol li:first-child {
+            background: #2e7d32;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* :last-child — выделить последний пункт */
+        ol li:last-child {
+            background: #1b5e20;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* :nth-child(3n) — каждый третий пункт */
+        ol li:nth-child(3n) {
+            border-left: 4px solid #f57c00;
+        }
+
+        /* :not(:first-child) — линии-разделители кроме первого */
+        ol li:not(:first-child) {
+            border-top: 1px solid #ddd;
+        }
+
+        /* ===== ТАБЛИЦА ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #2e7d32;
+            color: white;
+        }
+
+        /* :nth-child(even) — чередование строк таблицы */
+        tr:nth-child(even) {
+            background: #e8f5e9;
+        }
+
+        /* ===== ССЫЛКИ ===== */
+        a {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #1a73e8;
+            border: 1px solid #1a73e8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* :hover — реакция ссылок на наведение */
+        a:hover {
+            background: #1a73e8;
+            color: white;
+        }
+
+        /* Селектор по атрибуту — PDF-ссылки */
+        a[href$=".pdf"] {
+            color: #c44e52;
+            border-color: #c44e52;
+        }
+
+        a[href$=".pdf"]:hover {
+            background: #c44e52;
+            color: white;
+        }
+
+        /* Внешние ссылки */
+        a[href^="http"]::after {
+            content: " ↗";
+            font-size: 0.8em;
+        }
+
+        /* ===== ФОРМА ===== */
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #e0e0dc;
+            border-radius: 8px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        /* :focus — реакция полей на фокус */
+        input:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+
+        /* :required — выделить обязательные поля */
+        input:required {
+            border-left: 4px solid #f57c00;
+        }
+
+        input:required::placeholder {
+            color: #f57c00;
+        }
+
+        button {
+            padding: 12px 30px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #388e3c;
+        }
+
+        button:active {
+            background: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Псевдоклассы и селекторы по атрибутам</h1>
+
+    <!-- УПОРЯДОЧЕННЫЙ СПИСОК -->
+    <h2>Список задач</h2>
+    <ol>
+        <li>Изучить HTML (первый — зелёный фон)</li>
+        <li>Освоить CSS</li>
+        <li>Разобраться с JavaScript (каждый третий — оранжевая полоса)</li>
+        <li>Создать первый проект</li>
+        <li>Выучить Git</li>
+        <li>Найти стажировку (каждый третий — оранжевая полоса)</li>
+        <li>Сдать экзамен (последний — тёмно-зелёный фон)</li>
+    </ol>
+
+    <!-- ТАБЛИЦА -->
+    <h2>Результаты экзаменов</h2>
+    <table>
+        <tr>
+            <th>Предмет</th>
+            <th>Оценка</th>
+            <th>Дата</th>
+        </tr>
+        <tr>
+            <td>Математика</td>
+            <td>Отлично</td>
+            <td>15 января</td>
+        </tr>
+        <tr>
+            <td>Физика</td>
+            <td>Хорошо</td>
+            <td>18 января</td>
+        </tr>
+        <tr>
+            <td>Программирование</td>
+            <td>Отлично</td>
+            <td>22 января</td>
+        </tr>
+        <tr>
+            <td>Английский язык</td>
+            <td>Хорошо</td>
+            <td>25 января</td>
+        </tr>
+        <tr>
+            <td>История</td>
+            <td>Зачтено</td>
+            <td>29 января</td>
+        </tr>
+    </table>
+
+    <!-- ССЫЛКИ -->
+    <h2>Полезные ссылки</h2>
+    <p>
+        <a href="about.html">Внутренняя страница</a>
+        <a href="https://stepik.org">Внешний сайт Stepik</a>
+        <a href="document.pdf">Скачать PDF-документ</a>
+    </p>
+
+    <!-- ФОРМА -->
+    <h2>Форма обратной связи</h2>
+    <form>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" placeholder="Введите ваше имя">
+
+        <label for="email">Email (обязательно):</label>
+        <input type="email" id="email" placeholder="example@mail.ru" required>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+</body>
+</html>

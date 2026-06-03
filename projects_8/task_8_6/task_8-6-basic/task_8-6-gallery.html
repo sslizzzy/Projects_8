@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой день — фотогалерея</title>
+</head>
+<body>
+
+    <h1>Мой день в фотографиях</h1>
+    <p>Обычный учебный день: учёба, прогулка, отдых.</p>
+
+    <!-- Первая картинка с loading="eager" -->
+    <figure>
+        <img src="images/morning-coffee.jpg"
+             alt="Чашка кофе и открытый ноутбук на столе"
+             width="600" height="400"
+             loading="eager">
+        <figcaption>8:00 — Утренний кофе и подготовка к учёбе.</figcaption>
+    </figure>
+
+    <!-- Остальные с loading="lazy" -->
+    <figure>
+        <img src="images/lecture.jpg"
+             alt="Студенты в аудитории слушают лектора"
+             width="600" height="400"
+             loading="lazy">
+        <figcaption>10:30 — Лекция по веб-разработке в университете.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/lunch.jpg"
+             alt="Столовая с подносами и едой"
+             width="600" height="400"
+             loading="lazy">
+        <figcaption>13:00 — Обед в студенческой столовой. Сегодня борщ!</figcaption>
+    </figure>
+
+    <!-- Картинка-ссылка -->
+    <figure>
+        <a href="images/park.jpg"
+           target="_blank"
+           rel="noopener noreferrer">
+            <img src="images/park.jpg"
+                 alt="Осенний парк с жёлтыми листьями и скамейкой — нажмите для просмотра в полном размере"
+                 width="600" height="400"
+                 loading="lazy">
+        </a>
+        <figcaption>15:00 — Прогулка в парке после занятий. <em>Нажмите на фото, чтобы открыть в полном размере.</em></figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/library.jpg"
+             alt="Читальный зал библиотеки с рядами книжных полок"
+             width="600" height="400"
+             loading="lazy">
+        <figcaption>17:00 — Работа над проектом в библиотеке.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/evening.jpg"
+             alt="Закат над городом, вид из окна общежития"
+             width="600" height="400"
+             loading="lazy">
+        <figcaption>20:00 — Красивый закат из окна. День прошёл продуктивно!</figcaption>
+    </figure>
+
+</body>
+</html>

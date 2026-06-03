@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одностраничник — якоря и id</title>
+    <style>
+        /* Общие стили для всех секций */
+        section {
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Индивидуальные цвета по id */
+        #about {
+            background: #e0eaff;
+            padding: 20px;
+        }
+
+        #projects {
+            background: #fff5e0;
+            padding: 20px;
+        }
+
+        #contacts {
+            background: #e0f5e0;
+            padding: 20px;
+        }
+
+        /* Стили для навигации */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация с якорными ссылками -->
+    <nav aria-label="Навигация по странице">
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <h1>Мой сайт-визитка</h1>
+
+    <!-- Раздел "Обо мне" -->
+    <section id="about">
+        <h2>Обо мне</h2>
+        <p>
+            Меня зовут Елизавета. Я изучаю веб-разработку, Python и анализ данных.
+            Этот сайт создан в рамках учебного курса по HTML. Здесь я практикуюсь
+            в создании семантической разметки и работе с атрибутами.
+        </p>
+    </section>
+
+    <!-- Раздел "Проекты" -->
+    <section id="projects">
+        <h2>Проекты</h2>
+        <p>
+            В моём портфолио пока два учебных проекта: личный сайт-визитка
+            с семантической вёрсткой и скрипт на Python для анализа данных.
+            В планах — освоить JavaScript и создать интерактивное веб-приложение.
+        </p>
+    </section>
+
+    <!-- Раздел "Контакты" -->
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p>
+            Связаться со мной можно по электронной почте:
+            <a href="mailto:sirotchenko@spbpu.ru">sirotchenko@spbpu.ru</a>.
+            Также я есть в Telegram:
+            <a href="https://t.me/elizaveta" target="_blank" rel="noopener noreferrer">@elizaveta</a>.
+        </p>
+    </section>
+
+</body>
+</html>

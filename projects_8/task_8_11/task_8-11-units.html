@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эксперимент с единицами измерения</title>
+    <style>
+        /* Общий стиль для всех блоков */
+        .box {
+            border: 1px solid #4caf50;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #fafaf7;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Ширина в пикселях — фиксированная */
+        .size-px {
+            width: 200px;
+        }
+
+        /* Ширина в em — зависит от размера шрифта родителя */
+        .size-em {
+            width: 15em;
+        }
+
+        /* Ширина в rem — зависит от размера шрифта корневого элемента */
+        .size-rem {
+            width: 12rem;
+        }
+
+        /* Ширина в процентах — зависит от ширины родителя */
+        .size-percent {
+            width: 50%;
+        }
+
+        /* Ширина в vw — зависит от ширины окна браузера */
+        .size-vw {
+            width: 30vw;
+        }
+
+        /* Подписи */
+        .label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Эксперимент: единицы измерения CSS</h1>
+    <p>Изменяйте размер окна браузера и смотрите, какие блоки меняют ширину.</p>
+
+    <div class="box size-px">
+        <strong>Блок 1: px</strong>
+        <div class="label">width: 200px — не меняется при изменении окна</div>
+    </div>
+
+    <div class="box size-em">
+        <strong>Блок 2: em</strong>
+        <div class="label">width: 15em — зависит от размера шрифта родителя</div>
+    </div>
+
+    <div class="box size-rem">
+        <strong>Блок 3: rem</strong>
+        <div class="label">width: 12rem — зависит от размера шрифта корня (html)</div>
+    </div>
+
+    <div class="box size-percent">
+        <strong>Блок 4: %</strong>
+        <div class="label">width: 50% — половина ширины родителя</div>
+    </div>
+
+    <div class="box size-vw">
+        <strong>Блок 5: vw</strong>
+        <div class="label">width: 30vw — 30% ширины окна браузера</div>
+    </div>
+
+</body>
+</html>

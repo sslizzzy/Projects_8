@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анатомия CSS-правила</title>
+    <style>
+        /* ═══════════════════════════════════════
+           Базовые стили для всей страницы
+           ═══════════════════════════════════════ */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #fafaf7;              /* светло-серый фон страницы */
+            margin: 0;
+            padding: 40px;
+        }
+
+        /* Стили главного заголовка */
+        h1 {
+            color: #2e7d32;
+            font-size: 36px;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Стили подзаголовков */
+        h2 {
+            color: #1b5e20;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-family: Georgia, serif;
+        }
+
+        /* Стили абзацев */
+        p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.8;                 /* межстрочный интервал без единиц */
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background: #ffffff;
+            border-left: 4px solid #90caf9;
+        }
+
+        /* Стили ссылок */
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 1px solid #1a73e8;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Анатомия CSS-правила</h1>
+
+    <h2>Что такое селектор?</h2>
+    <p>
+        Селектор указывает браузеру, к каким элементам применять стили.
+        Это может быть тег (например, h1), класс (.my-class) или id (#my-id).
+        В этом файле все правила используют селекторы по тегу.
+    </p>
+
+    <h2>Что такое объявления?</h2>
+    <p>
+        Объявления — это пары «свойство: значение» внутри фигурных скобок.
+        Каждое объявление завершается точкой с запятой. В одном правиле
+        может быть сколько угодно объявлений.
+    </p>
+
+    <p>
+        Посетите
+        <a href="https://developer.mozilla.org/ru/">MDN Web Docs</a>
+        для изучения всех CSS-свойств.
+    </p>
+
+</body>
+</html>

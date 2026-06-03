@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточки с классами</title>
+    <style>
+        /* 1. Общий стиль карточки */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px 15px 15px 20px;
+            margin: 15px 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* 2. Высокий приоритет — красная левая полоса */
+        .priority-high {
+            border-left: 5px solid #d32f2f;
+        }
+
+        /* 3. Средний приоритет — оранжевая левая полоса */
+        .priority-medium {
+            border-left: 5px solid #f57c00;
+        }
+
+        /* 4. Низкий приоритет — зелёная левая полоса */
+        .priority-low {
+            border-left: 5px solid #388e3c;
+        }
+
+        /* 5. Избранная карточка — тень и особый фон */
+        .featured {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background: #fafafa;
+            border-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Мои задачи</h1>
+    <p>Карточки распределены по приоритетам. Избранная задача отмечена дополнительно.</p>
+
+    <!-- PRIORITY-HIGH: 2 карточки -->
+    <div class="card priority-high featured">
+        <h3>Сдать экзамен по математике</h3>
+        <p>
+            Подготовиться к экзамену, повторить интегралы и производные.
+            Экзамен через две недели — времени мало, приоритет максимальный.
+        </p>
+    </div>
+
+    <div class="card priority-high">
+        <h3>Доделать курсовой проект</h3>
+        <p>
+            Осталось написать заключение и оформить список литературы.
+            Дедлайн завтра в 23:59 — нужно срочно заканчивать.
+        </p>
+    </div>
+
+    <!-- PRIORITY-MEDIUM: 2 карточки -->
+    <div class="card priority-medium">
+        <h3>Разобраться с CSS Flexbox</h3>
+        <p>
+            Пройти туториал по флексбоксам, сделать несколько упражнений.
+            Это пригодится для вёрстки следующего проекта.
+        </p>
+    </div>
+
+    <div class="card priority-medium">
+        <h3>Обновить резюме</h3>
+        <p>
+            Добавить новые навыки и последний учебный проект.
+            Отправить на проверку куратору до конца недели.
+        </p>
+    </div>
+
+    <!-- PRIORITY-LOW: 2 карточки -->
+    <div class="card priority-low">
+        <h3>Почитать книгу по Python</h3>
+        <p>
+            Начать читать «Автоматизацию рутинных задач с Python».
+            Можно делать в свободное время, без жёстких сроков.
+        </p>
+    </div>
+
+    <div class="card priority-low">
+        <h3>Настроить рабочее окружение</h3>
+        <p>
+            Установить расширения для VS Code, настроить тему и шрифт.
+            Несрочно, но сделает работу комфортнее.
+        </p>
+    </div>
+
+</body>
+</html>

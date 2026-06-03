@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Базовые селекторы CSS</title>
+    <style>
+        /* 1. Универсальный селектор — сброс отступов и box-sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Селектор по тегу — базовые стили страницы */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #fafaf7;
+            padding: 30px;
+        }
+
+        /* 3. Селектор по ID — уникальный заголовок */
+        #title {
+            color: #2e7d32;
+            font-size: 36px;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* 4. Группировка через запятую — общие стили для заголовков */
+        h2, h3 {
+            color: #1b5e20;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 5. Селектор по классу — выделенный абзац */
+        .lead {
+            font-size: 20px;
+            color: #555;
+            font-style: italic;
+            border-left: 4px solid #f57c00;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Базовый стиль всех блоков */
+        .box {
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 2px solid #e0e0dc;
+            border-radius: 8px;
+            background: #ffffff;
+            font-size: 14px;
+        }
+
+        /* 6. Два класса слитно — блок с подсветкой */
+        .box.highlight {
+            background: #fff9c4;
+            border-color: #fbc02d;
+        }
+
+        /* 7. Три класса слитно — большой подсвеченный блок */
+        .box.highlight.large {
+            font-size: 20px;
+            padding: 30px;
+            border-width: 4px;
+        }
+
+        /* Обычный абзац */
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Базовые селекторы CSS</h1>
+
+    <p>
+        Это обычный абзац. К нему применяется только селектор по тегу <code>p</code>.
+        Никаких дополнительных классов у него нет.
+    </p>
+
+    <p class="lead">
+        Это выделенный абзац с классом <code>lead</code>. К нему применяется
+        селектор по классу <code>.lead</code> — более крупный шрифт,
+        курсив и оранжевая полоса слева.
+    </p>
+
+    <div class="box">
+        <strong>Блок 1:</strong> обычный <code>.box</code> — белый фон, серая рамка.
+    </div>
+
+    <div class="box highlight">
+        <strong>Блок 2:</strong> <code>.box.highlight</code> — два класса,
+        жёлтый фон и оранжевая рамка.
+    </div>
+
+    <div class="box highlight large">
+        <strong>Блок 3:</strong> <code>.box.highlight.large</code> — три класса,
+        жёлтый фон, толстая рамка, крупный текст и большие отступы.
+    </div>
+
+</body>
+</html>

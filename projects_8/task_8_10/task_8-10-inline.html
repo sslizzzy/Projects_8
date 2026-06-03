@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline-стили</title>
+</head>
+<body>
+
+    <h1 style="color: #2e7d32; font-family: Arial, sans-serif; font-size: 32px; text-align: center; margin-bottom: 30px;">
+        Оформление через inline-стили
+    </h1>
+
+    <p style="color: #333; font-size: 18px; font-family: Georgia, serif; line-height: 1.6; padding: 10px; background: #f5f5f5; border-left: 4px solid #4caf50; margin-bottom: 15px;">
+        Это первый абзац. Он оформлен с зелёной левой полосой и серым фоном.
+        Inline-стили задаются прямо в атрибуте <code>style</code> каждого HTML-тега.
+        Это самый «локальный» способ оформления.
+    </p>
+
+    <p style="color: #1a1a2e; font-size: 16px; font-family: Verdana, sans-serif; background: #fff5e0; padding: 15px; border: 2px dashed #f57c00; margin-bottom: 15px;">
+        Второй абзац — с оранжевой пунктирной рамкой. Обратите внимание:
+        каждый элемент получает свои стили независимо от других.
+        Это делает код громоздким при большом количестве элементов.
+    </p>
+
+    <p style="color: white; font-size: 17px; font-family: Tahoma, sans-serif; background: #d32f2f; padding: 12px 20px; border-radius: 8px; text-align: center;">
+        Третий абзац — белый текст на красном фоне со скруглёнными углами.
+        Inline-стили имеют самый высокий приоритет и переопределяют другие стили.
+    </p>
+
+    <ul style="font-family: Arial, sans-serif; font-size: 16px; color: #333; background: #e0eaff; padding: 20px 40px; margin-top: 20px; border: 1px solid #90caf9; border-radius: 8px;">
+        <li style="margin-bottom: 8px; color: #1a237e;">Первый пункт списка</li>
+        <li style="margin-bottom: 8px; color: #283593;">Второй пункт списка</li>
+        <li style="margin-bottom: 8px; color: #3949ab;">Третий пункт списка</li>
+    </ul>
+
+</body>
+</html>
